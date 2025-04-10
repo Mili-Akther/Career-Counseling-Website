@@ -1,9 +1,18 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const MainLayout = () => {
     return (
-        <div className='text-center text-5xl text-red-500'>
-            i am main layout 
+        <div> 
+            <Navbar />
+            <Outlet />
+          
+            {/* <Navbar /> */}
+            {/* <Footer /> */}
+            <Footer></Footer>
+            {/* <Sidebar /> */}
         </div>
     );
 };
