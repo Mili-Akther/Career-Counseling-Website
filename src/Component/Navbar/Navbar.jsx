@@ -14,7 +14,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-blue-500 font-semibold" : ""
+                isActive ? "text-blue-500 font-bold" : ""
               }
             >
               Home
@@ -24,13 +24,53 @@ const Navbar = () => {
             <NavLink
               to="/profile"
               className={({ isActive }) =>
-                isActive ? "text-blue-500 font-semibold" : ""
+                isActive ? "text-blue-500 font-bold" : ""
               }
             >
               My Profile
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 font-bold" : ""
+              }
+            >
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 font-bold" : ""
+              }
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 font-bold" : ""
+              }
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
+      </div>
+      <div>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-bold" : ""
+          }
+        >
+          <button className="btn btn-primary">Login</button>
+        </NavLink>
       </div>
     </div>
   );

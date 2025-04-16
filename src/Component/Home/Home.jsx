@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
-import femaleImg from '../assets/laptop-female-pic.png'
+import femaleImg from '../../assets/laptop-female-pic.png'
 const Home = () => {
     return (
       <section className="flex flex-col md:flex-row items-center justify-between w-full h-screen overflow-hidden bg-white text-black">
