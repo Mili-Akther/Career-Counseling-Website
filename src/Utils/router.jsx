@@ -6,6 +6,7 @@ import Profile from "../Component/Profile/Profile";
 import Contact from "../Component/Contact/Contact";
 import Services from "../Component/Services/Services";
 import Login from "../Component/Login/Login";
+import Error from "../Component/Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () =>
+          fetch("/services.json"),
       },
       {
         path: "/about",
@@ -29,7 +32,7 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
-        path: "/login", 
+        path: "/login",
         element: <Login></Login>,
       },
       {
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
         element: <Services></Services>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 export default router;

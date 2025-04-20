@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/HfrfPRc4/john-doe.jpg",
+    "name": "Career Counseling Session",
+    "category": "Online",
+    "price": "$30",
+    "counselor": "John Doe"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/VpkdJt25/Jane-Smith.jpg",
+    "name": "Resume Review",
+    "category": "Offline",
+    "price": "$15",
+    "counselor": "Jane Smith"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/232kpGhL/Mark-Lee.jpg",
+    "name": "Mock Interview",
+    "category": "Group",
+    "price": "$20",
+    "counselor": "Mark Lee"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/chPCzPRC/Lily-Grace.jpg",
+    "name": "Cover Letter Writing ",
+    "category": "Online",
+    "price": "$10",
+    "counselor": "Lily Grace"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/2YYJFc01/Olivia-White.jpg",
+    "name": "LinkedIn Profile Setup",
+    "category": "Online",
+    "price": "$12",
+    "counselor": "Olivia White"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/Dh936Sv/Emma-Ray.jpg",
+    "name": "Job Search Strategy",
+    "category": "Offline",
+    "price": "$25",
+    "counselor": "Emma Ray"
+  }
+]
+    

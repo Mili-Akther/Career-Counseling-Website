@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/kB4KpXW/career-counseling.jpg",
+    "serviceName": "Career Counseling Sessions",
+    "category": "Online (One-on-One)",
+    "description": "Personalized career counseling session with a certified expert to help you identify your strengths, interests, and the right career path.",
+    "price": "$25",
+    "duration": "2025-05-12 5:00 PM - 6:00 PM",
+    "counselor": "Sarah Ahmed",
+    "rating": 4.9,
+    "learnMore": "https://careerguide.com/services/counseling-session"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/1J0DjFM/resume-review.jpg",
+    "serviceName": "Resume Review",
+    "category": "Online (Document Feedback)",
+    "description": "Professional feedback on your resume to help you stand out in your job applications. Includes formatting, structure, and keyword suggestions.",
+    "price": "$15",
+    "duration": "2025-05-14 (within 24 hours of submission)",
+    "counselor": "John Malik",
+    "rating": 4.7,
+    "learnMore": "https://careerguide.com/services/resume-review"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/Xx5XmhB/group-session.jpg",
+    "serviceName": "Group Career Workshop",
+    "category": "Offline (Group Session)",
+    "description": "Join a collaborative workshop where you’ll learn job search strategies, goal setting, and how to build confidence for interviews.",
+    "price": "$10",
+    "duration": "2025-05-20 3:00 PM - 4:30 PM",
+    "counselor": "Farzana Kabir",
+    "rating": 4.6,
+    "learnMore": "https://careerguide.com/services/group-workshop"
+  }
+]
