@@ -7,6 +7,7 @@ import Contact from "../Component/Contact/Contact";
 import Services from "../Component/Services/Services";
 import Login from "../Component/Login/Login";
 import Error from "../Component/Error/Error";
+import Register from "../Component/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/services",
