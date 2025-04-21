@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ServicesCard = ({ service }) => {
-  const { image, name, category, price, counselor } = service;
+  const { image, name, category, price, counselor,id } = service;
 
   return (
     <div className="card bg-base-100 shadow-xl transition-transform hover:scale-105">
@@ -20,7 +21,9 @@ const ServicesCard = ({ service }) => {
           <strong>Counselor:</strong> {counselor}
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-outline btn-primary">Learn More</button>
+          <NavLink to={`/serviceDetails/${id}`}>
+            <button className="btn btn-outline btn-primary">Learn More</button>
+          </NavLink>
         </div>
       </div>
     </div>

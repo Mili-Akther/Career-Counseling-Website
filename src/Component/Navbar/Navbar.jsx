@@ -37,7 +37,7 @@ const Navbar = () => {
                 isActive ? "text-blue-500 font-bold" : ""
               }
             >
-              Services
+             All Services
             </NavLink>
           </li>
           <li>

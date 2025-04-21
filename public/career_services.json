@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/kB4KpXW/career-counseling.jpg",
+    "image": "https://i.ibb.co.com/HfrfPRc4/john-doe.jpg",
     "serviceName": "Career Counseling Sessions",
     "category": "Online (One-on-One)",
     "description": "Personalized career counseling session with a certified expert to help you identify your strengths, interests, and the right career path.",
     "price": "$25",
     "duration": "2025-05-12 5:00 PM - 6:00 PM",
-    "counselor": "Sarah Ahmed",
+    "counselor": "John Doe",
     "rating": 4.9,
     "learnMore": "https://careerguide.com/services/counseling-session"
   },
@@ -34,5 +34,89 @@
     "counselor": "Farzana Kabir",
     "rating": 4.6,
     "learnMore": "https://careerguide.com/services/group-workshop"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/QF5nPY8/mock-interview.jpg",
+    "serviceName": "Mock Interview Practice",
+    "category": "Online (One-on-One)",
+    "description": "Simulated interview session to build confidence and improve your performance in real interviews.",
+    "price": "$20",
+    "duration": "2025-05-15 4:00 PM - 5:00 PM",
+    "counselor": "Imran Hossain",
+    "rating": 4.8,
+    "learnMore": "https://careerguide.com/services/mock-interview"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/dQqQczf/linkedin-optimization.jpg",
+    "serviceName": "LinkedIn Profile Optimization",
+    "category": "Online (Profile Feedback)",
+    "description": "Make your LinkedIn profile shine with expert suggestions for visibility, headline optimization, and networking tips.",
+    "price": "$12",
+    "duration": "2025-05-16 (within 12 hours)",
+    "counselor": "Tahmina Sultana",
+    "rating": 4.5,
+    "learnMore": "https://careerguide.com/services/linkedin-profile"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/jJgkSpN/scholarship-guide.jpg",
+    "serviceName": "Scholarship Guidance",
+    "category": "Online (One-on-One)",
+    "description": "Get expert help in finding and applying to scholarships based on your academic and personal profile.",
+    "price": "$18",
+    "duration": "2025-05-18 2:00 PM - 3:00 PM",
+    "counselor": "Rezaul Karim",
+    "rating": 4.7,
+    "learnMore": "https://careerguide.com/services/scholarship-guide"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/p2y5MWM/study-abroad.jpg",
+    "serviceName": "Study Abroad Planning",
+    "category": "Online (Consultation)",
+    "description": "Learn everything from country selection to application process for your dream university abroad.",
+    "price": "$30",
+    "duration": "2025-05-22 11:00 AM - 12:30 PM",
+    "counselor": "Nadia Chowdhury",
+    "rating": 4.9,
+    "learnMore": "https://careerguide.com/services/study-abroad"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/tHdFDMr/portfolio-review.jpg",
+    "serviceName": "Portfolio Review",
+    "category": "Online (Creative Feedback)",
+    "description": "Detailed review of your design or dev portfolio with actionable tips to impress employers.",
+    "price": "$22",
+    "duration": "2025-05-21 (within 48 hours)",
+    "counselor": "Mithun Roy",
+    "rating": 4.4,
+    "learnMore": "https://careerguide.com/services/portfolio-review"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/fYhkFPk/job-search-strategy.jpg",
+    "serviceName": "Job Search Strategy",
+    "category": "Online (One-on-One)",
+    "description": "Build an effective job search strategy tailored to your goals with expert advice.",
+    "price": "$28",
+    "duration": "2025-05-19 6:00 PM - 7:00 PM",
+    "counselor": "Asif Rahman",
+    "rating": 4.6,
+    "learnMore": "https://careerguide.com/services/job-strategy"
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/n8tVr2F/personal-branding.jpg",
+    "serviceName": "Personal Branding Tips",
+    "category": "Online (Workshop)",
+    "description": "Boost your personal brand online and offline with actionable branding strategies.",
+    "price": "$16",
+    "duration": "2025-05-25 3:30 PM - 4:30 PM",
+    "counselor": "Lubna Nahar",
+    "rating": 4.8,
+    "learnMore": "https://careerguide.com/services/personal-branding"
   }
 ]
