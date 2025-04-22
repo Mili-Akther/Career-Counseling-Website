@@ -5,15 +5,15 @@ const ServicesCard = ({ service }) => {
   const { image, name, category, price, counselor,id } = service;
 
   return (
-    <div className="card bg-base-100 shadow-xl transition-transform hover:scale-105">
+    <div className="card card-body bg-base-100 shadow-xl transition-transform hover:scale-105 mx-auto">
       <figure>
         <img src={image} alt={name} className="h-52 w-full object-fill" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <p>
-          <strong>Category:</strong> {category}
-        </p>
+          <strong>Category:</strong> {category}   
+        </p>  
         <p>
           <strong>Price:</strong> {price}
         </p>

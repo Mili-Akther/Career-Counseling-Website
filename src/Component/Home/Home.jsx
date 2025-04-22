@@ -10,11 +10,11 @@ const Home = () => {
     <div>
       <Banner></Banner>
 
-      <div className="grid md:grid-cols-3 gap-6 justify-center px-4 mt-18">
-        {services.slice(0, 6).map((service) => (
+      <div className="grid md:grid-cols-4  gap-6 justify-center mt-18">
+        {services.slice(0, 4).map((service) => (
           <ServicesCard key={service.id} service={service} />
         ))}
-      </div>
+      </div>  
       <button className="btn btn-outline btn-primary mx-auto mt-6">
         <NavLink to="/services">Show More</NavLink>
       </button>

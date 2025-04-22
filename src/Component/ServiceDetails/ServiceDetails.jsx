@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Modal from '../Modal/Modal';
 
 const ServiceDetails = () => {
     const {
@@ -15,7 +16,7 @@ const ServiceDetails = () => {
 
     } = useLoaderData();
     return (
-      <section className="min-h-screen w-full bg-gradient-to-br from-[#dbdddd] to-[#56828b] text-white flex flex-col justify-center items-center px-6 py-16">
+      <section className="min-h-screen w-full bg-gradient-to-br from-[#000000] to-[#797979] text-white flex flex-col justify-center items-center px-6 py-16">
         {/* Title */}
         <div className="text-center mb-16 ">
           <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight -mt-42">
@@ -42,7 +43,10 @@ const ServiceDetails = () => {
               counselors will work closely with you to uncover your unique
               talents, passions, and aspirations.
             </p>
-            <button className="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-3 rounded-full font-semibold transition duration-300">
+            <button
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+               className="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-3 rounded-full font-semibold transition duration-300"
+            >
               book a session
             </button>
           </div>
@@ -54,8 +58,9 @@ const ServiceDetails = () => {
               alt="Career Counselor"
               className="w-[4000px] h-[450px] border-5 rounded-3xl border-cyan-400"
             />
-          </div>
+          </div>  
         </div>
+        <Modal></Modal>
       </section>
     );
 };
