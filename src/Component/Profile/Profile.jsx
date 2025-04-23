@@ -1,6 +1,8 @@
-import React from "react";
+import React, { } from "react";
 
 const Profile = () => {
+  // const contextValue = useContext{authContext};
+  // console.log(contextValue); 
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="text-3xl font-bold mb-4">My Profile</div>
