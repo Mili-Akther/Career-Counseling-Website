@@ -1,9 +1,14 @@
-import React, {      useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { TbNavigationWest } from "react-icons/tb";
 
 const Login = () => {
   const { userLogin , setUser} = useContext(AuthContext);
+  const [error, setError] = useState({});
+  const location = useLocation();
+  const navigate = useNavigate()
+  console.log(location);
   const handleSubmit = (e) => {
     e.preventDefault();
     // get form data    
@@ -16,9 +21,10 @@ const Login = () => {
       const user = result.user;
       setUser(user);
       console.log(user);
+      navigate(location?.state?location.state : "/")
     })
-    .catch((error) => {
-    alert(error.code    )
+    .catch((err) => {
+   setError({ ...error, login: err.code });
      
     });
 
@@ -48,12 +54,24 @@ const Login = () => {
               Password
             </label>
             <input
-            name="password"
+              name="password"
               type="password"
               placeholder="Enter your password"
               className="input input-bordered w-full"
               required
             />
+          </div>
+          <div className="flex items-center justify-between">
+            {error.login && <label className="label">{error.login}</label>}
+            <label className="label">
+              <a
+                href="#"
+                className="label-text-alt link link-hover text-sm text-red-500"
+              >
+                {" "}
+                Forgot Password?
+              </a>
+            </label>
           </div>
           <button type="submit" className="btn btn-primary w-full">
             Login
