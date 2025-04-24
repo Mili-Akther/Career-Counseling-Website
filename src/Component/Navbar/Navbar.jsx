@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
   return (
     <div className="navbar bg-base-100 shadow-md px-6">
       <div className="flex-1">
@@ -11,7 +11,7 @@ const Navbar = () => {
           CareerGuide
         </NavLink>
       </div>
-      <div>{ user && user.name}</div>
+      <div>{user && user.name}</div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 gap-4">
           <li>
@@ -23,7 +23,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-          </li> 
+          </li>
           <li>
             <NavLink
               to="/profile"
@@ -41,7 +41,7 @@ const Navbar = () => {
                 isActive ? "text-blue-500 font-bold" : ""
               }
             >
-             All Services
+              All Services
             </NavLink>
           </li>
           <li>
@@ -67,14 +67,20 @@ const Navbar = () => {
         </ul>
       </div>
       <div>
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500 font-bold" : ""
-          }
-        >
-          <button className="btn btn-primary">Login</button>
-        </NavLink>
+        {user && user?.email ? (
+          <button onClick={logOut} className="btn btn-primary">
+            Log-Out
+          </button>
+        ) : (
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "text-blue-500 font-bold" : ""
+            }
+          >
+            <button className="btn btn-primary">Login</button>
+          </NavLink>
+        )}
       </div>
     </div>
   );
