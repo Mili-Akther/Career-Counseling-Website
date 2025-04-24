@@ -11,7 +11,7 @@ const Navbar = () => {
           CareerGuide
         </NavLink>
       </div>
-      <div>{user.name}</div>
+      <div>{ user && user.name}</div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 gap-4">
           <li>
@@ -23,7 +23,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-          </li>
+          </li> 
           <li>
             <NavLink
               to="/profile"
