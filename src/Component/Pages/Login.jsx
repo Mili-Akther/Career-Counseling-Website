@@ -1,4 +1,4 @@
-import React, { use, useContext } from "react";
+import React, {      useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -18,7 +18,7 @@ const Login = () => {
       console.log(user);
     })
     .catch((error) => {
-    alert(error.code)
+    alert(error.code    )
      
     });
 

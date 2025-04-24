@@ -5,10 +5,11 @@ import About from "../Component/About/About";
 import Profile from "../Component/Profile/Profile";
 import Contact from "../Component/Contact/Contact";
 import Services from "../Component/Services/Services";
-import Login from "../Component/Login/Login";
+import Login from "../Component/Pages/Login";
 import Error from "../Component/Error/Error";
-import Register from "../Component/Register/Register";
-import ServiceDetails from "../Component/ServiceDetails/ServiceDetails";
+import Register from "../Component/Pages/Register";
+import ServiceDetails from "../Component/Pages/ServiceDetails";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -42,14 +43,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/serviceDetails/:id",
-        element: <ServiceDetails></ServiceDetails>,
-        loader:async({ params }) =>
-        {
+        element: (
+          <PrivateRouter>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRouter>
+        ),
+        loader: async ({ params }) => {
           const res = await fetch("/services.json");
           const data = await res.json();
-          const singleData= data.find(d=>d.id==params.id)
+          const singleData = data.find((d) => d.id == params.id);
           return singleData;
-        }
+        },
       },
       {
         path: "/services",
