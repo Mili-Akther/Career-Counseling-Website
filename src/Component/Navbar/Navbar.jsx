@@ -4,8 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
-
+  const { user, logOut } = useContext(AuthContext); // console.log(import.meta.env.VITE_a);
   return (
     <div className="navbar bg-base-100 shadow-md px-6">
       <div className="flex-1">
@@ -82,7 +81,7 @@ const Navbar = () => {
               <FaUserCircle className="text-3xl" />
             )}
             <p>{user.displayName}</p>
-            <button onClick={logOut} className="btn btn-primary">
+            <button onClick={logOut} className="btn btn-outline">
               Log-Out
             </button>
           </>
@@ -93,7 +92,7 @@ const Navbar = () => {
               isActive ? "text-blue-500 font-bold" : ""
             }
           >
-            <button className="btn btn-primary">Login</button>
+            <button className="btn btn-outline">Login</button>
           </NavLink>
         )}
       </div>
@@ -102,4 +101,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-  

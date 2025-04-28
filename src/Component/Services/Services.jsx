@@ -4,7 +4,7 @@ import ServicesCard from '../ServicesCard/ServicesCard';
 
 const Services = () => {
     const services = useLoaderData();
-    console.log(services);
+    // console.log(services);
     return (
       <div className="grid md:grid-cols-3 gap-6 justify-center px-4 mt-18">
         {services.map((service) => (

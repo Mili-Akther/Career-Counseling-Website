@@ -1,10 +1,10 @@
 import React from "react";
 
 const Modal = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(e); 
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(e);
+  };
   return (
     <div>
       <dialog
@@ -13,7 +13,7 @@ const Modal = () => {
       >
         <div className="modal-box">
           <h3 className="font-bold text-lg mb-4">Book an Appointment</h3>
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4" >
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
             <div>
               <label className="label">
                 <span className="label-text">First Name</span>
@@ -66,9 +66,11 @@ const Modal = () => {
               <label className="label">
                 <span className="label-text">Appointment Date</span>
               </label>
-              <input type="date" className="input input-bordered w-full"
+              <input
+                type="date"
+                className="input input-bordered w-full"
                 name="appointmentDate"
-               />                       
+              />
             </div>
 
             <div>
@@ -85,10 +87,10 @@ const Modal = () => {
 
             <div className="modal-action">
               <form method="dialog">
-                <button className="btn">Close</button>
+                <button className="btn btn-outline">Close</button>
               </form>
-              <button type="submit" className="btn btn-primary">
-                Make Appointment    
+              <button type="submit" className="btn btn-outline">
+                Make Appointment
               </button>
             </div>
           </form>

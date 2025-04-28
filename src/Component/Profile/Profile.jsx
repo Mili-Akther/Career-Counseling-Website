@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 
@@ -52,7 +52,7 @@ const Profile = () => {
             className="input input-bordered w-full"
           />
         </div>
-        <button type="submit" className="btn btn-primary w-full">
+        <button type="submit" className="btn btn-outline w-full">
           Save Changes
         </button>
       </form>

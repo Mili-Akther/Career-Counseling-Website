@@ -5,7 +5,10 @@
     "name": "Career Counseling Session",
     "category": "Online",
     "price": "$30",
-    "counselor": "John Doe"
+    "counselor": "John Doe",
+    "description": "Get personalized guidance for your career goals with one-on-one expert advice.",
+    "duration": "1 hour",
+    "rating": 4.8
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "name": "Resume Review",
     "category": "Offline",
     "price": "$15",
-    "counselor": "Jane Smith"
+    "counselor": "Jane Smith",
+    "description": "Get your resume professionally reviewed to stand out to employers.",
+    "duration": "30 minutes",
+    "rating": 4.6
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "name": "Mock Interview",
     "category": "Group",
     "price": "$20",
-    "counselor": "Mark Lee"
+    "counselor": "Mark Lee",
+    "description": "Practice with mock interviews to build confidence and improve performance.",
+    "duration": "45 minutes",
+    "rating": 4.7
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "name": "Cover Letter Writing ",
     "category": "Online",
     "price": "$10",
-    "counselor": "Lily Grace"
+    "counselor": "Lily Grace",
+    "description": "Craft a compelling cover letter tailored to your desired job roles.",
+    "duration": "25 minutes",
+    "rating": 4.5
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "name": "LinkedIn Profile Setup",
     "category": "Online",
     "price": "$12",
-    "counselor": "Olivia White"
+    "counselor": "Olivia White",
+    "description": "Set up a professional LinkedIn profile to attract recruiters and employers.",
+    "duration": "30 minutes",
+    "rating": 4.4
   },
   {
     "id": 6,
@@ -45,7 +60,76 @@
     "name": "Job Search Strategy",
     "category": "Offline",
     "price": "$25",
-    "counselor": "Emma Ray"
+    "counselor": "Emma Ray",
+    "description": "Learn effective job search strategies and tools to land your dream job.",
+    "duration": "1 hour",
+    "rating": 4.9
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/FLxHGS3V/Michael-Tan.jpg",
+    "name": "Career Change Consultation",
+    "category": "Online",
+    "price": "$35",
+    "counselor": "Michael Tan",
+    "description": "Thinking of switching careers? Get guidance on how to make a smooth transition.",
+    "duration": "1 hour",
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/JjhdxY5z/ava-chen.jpg",
+    "name": "Skill Assessment",
+    "category": "Group",
+    "price": "$18",
+    "counselor": "Ava Chen",
+    "description": "Discover your strongest skills and how to apply them to the right job roles.",
+    "duration": "40 minutes",
+    "rating": 4.6
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/v6pwyDKR/david-kim.jpg",
+    "name": "Freelancing Setup",
+    "category": "Online",
+    "price": "$28",
+    "counselor": "David Kim",
+    "description": "Step-by-step guidance on starting your freelancing career and building your portfolio.",
+    "duration": "1 hour",
+    "rating": 4.8
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/gLmT6mwR/sophia.jpg",
+    "name": "Interview Confidence Coaching",
+    "category": "Offline",
+    "price": "$22",
+    "counselor": "Sophia Brown",
+    "description": "Boost your confidence with techniques and mock interview practice.",
+    "duration": "45 minutes",
+    "rating": 4.7
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/7dDbp033/ethan.jpg",
+    "name": "Scholarship Guidance",
+    "category": "Online",
+    "price": "$16",
+    "counselor": "Ethan Rivera",
+    "description": "Learn how to find and apply for scholarships that suit your academic journey.",
+    "duration": "35 minutes",
+    "rating": 4.5
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/dw1WJxn6/isabella.jpg",
+    "name": "Portfolio Review",
+    "category": "Online",
+    "price": "$19",
+    "counselor": "Isabella Martin",
+    "description": "Receive expert feedback on your creative or technical portfolio to make it job-ready.",
+    "duration": "45 minutes",
+    "rating": 4.6
   }
 ]
-    
+ 

@@ -4,30 +4,28 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { TbNavigationWest } from "react-icons/tb";
 
 const Login = () => {
-  const { userLogin , setUser} = useContext(AuthContext);
+  const { userLogin, setUser } = useContext(AuthContext);
   const [error, setError] = useState({});
   const location = useLocation();
-  const navigate = useNavigate()
-  console.log(location);
+  const navigate = useNavigate();
+  // console.log(location);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // get form data    
-    const form = (e.target);
-   const email = form.email.value;
+    // get form data
+    const form = e.target;
+    const email = form.email.value;
     const password = form.password.value;
-    console.log({ email, password });
+    // console.log({ email, password });
     userLogin(email, password)
-    .then((result) => {
-      const user = result.user;
-      setUser(user);
-      console.log(user);
-      navigate(location?.state?location.state : "/")
-    })
-    .catch((err) => {
-   setError({ ...error, login: err.code });
-     
-    });
-
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        // console.log(user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((err) => {
+        setError({ ...error, login: err.code });
+      });
   };
 
   return (
@@ -73,14 +71,14 @@ const Login = () => {
               </a>
             </label>
           </div>
-          <button type="submit" className="btn btn-primary w-full">
+          <button type="submit" className="btn btn-outline w-full">
             Login
           </button>
         </form>
 
         <div className="divider">OR</div>
 
-        <button className="btn btn-outline btn-secondary w-full">
+        <button className="btn btn-outline btn btn-outline-outline btn btn-outline-secondary w-full">
           Continue with Google
         </button>
 

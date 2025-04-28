@@ -8,7 +8,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
   const [error, setError] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Register = () => {
     const email = form.get("email");
     const photo = form.get("photo");
     const password = form.get("password");
-    console.log({ name, email, photo, password });
+    // console.log({ name, email, photo, password });
 
     // Password validation
     const passwordErrors = [];
@@ -49,7 +49,7 @@ const Register = () => {
             navigate(location.state || "/");
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
           });
       })
       .catch((error) => {
@@ -141,14 +141,14 @@ const Register = () => {
             </label>
           )}
 
-          <button type="submit" className="btn btn-primary w-full">
+          <button type="submit" className="btn btn-outline  w-full">
             Register
           </button>
         </form>
 
         <div className="divider">OR</div>
 
-        <button className="btn btn-outline btn-secondary w-full">
+        <button className="btn btn-outline btn btn-outline-outline btn btn-outline-secondary w-full">
           Continue with Google
         </button>
 
