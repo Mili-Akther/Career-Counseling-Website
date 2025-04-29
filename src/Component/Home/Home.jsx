@@ -3,6 +3,7 @@ import Banner from "../Banner/BAnner";
 import { NavLink, useLoaderData } from "react-router-dom";
 import ServicesCard from "../ServicesCard/ServicesCard";
 import CareerHighlights from "../CareerHighlights/CareerHighlights";
+import PersonalizedGuidance from "../PersonalizedGuidance/PersonalizedGuidance";
 const Home = () => {
   const services = useLoaderData();
   // console.log(services);
@@ -15,11 +16,12 @@ const Home = () => {
           <ServicesCard key={service.id} service={service} />
         ))}
       </div>
-      <button className="flex items-center btn btn-outline btn btn-outline-outline text-xl mx-auto mt-6 mb-6">
+      <button className="flex items-center btn bg-cyan-400 hover:bg-cyan-300 text-black btn-outline-outline text-xl mx-auto mt-6 mb-6">
         <NavLink to="/services">Show More</NavLink>
       </button>
 
       <CareerHighlights></CareerHighlights>
+      <PersonalizedGuidance></PersonalizedGuidance>
     </div>
   );
 };

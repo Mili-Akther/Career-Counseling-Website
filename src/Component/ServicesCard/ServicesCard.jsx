@@ -26,7 +26,7 @@ const ServicesCard = ({ service }) => {
         </p>
         <div className="card-actions justify-end">
           <NavLink to={`/serviceDetails/${id}`}>
-            <button className="btn btn-outline btn-outline-outline">
+            <button className="btn btn-outline-outline bg-cyan-400 hover:bg-cyan-300 text-black">
               Learn More
             </button>
           </NavLink>

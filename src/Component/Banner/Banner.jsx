@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import discoverImg from "../../assets/discover-your-path.jpg"
-import yourDreamImg from "../../assets/Achieve-Your-Dreams.jpg"
-import YourFutureImg from "../../assets/Create-Your-Future.jpg"
-import YourDestinyImg from "../../assets/Shape-Your-Destiny.jpg"
+
+import discoverImg from "../../assets/discover-your-path.jpg";
+import yourDreamImg from "../../assets/Achieve-Your-Dreams.jpg";
+import YourFutureImg from "../../assets/Create-Your-Future.jpg";
+import YourDestinyImg from "../../assets/Shape-Your-Destiny.jpg";
+
 const Banner = () => {
   const slidesData = [
     {
@@ -52,14 +54,14 @@ const Banner = () => {
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-screen px-6 sm:px-10 py-16 sm:py-20">
+            <div className="flex flex-col md:flex-row items-center justify-between w-full  px-4 sm:px-8 md:px-12 py-12 sm:py-18 gap-12">
               {/* Left Content */}
-              <div className="w-full md:w-1/2 flex flex-col items-start relative">
+              <div className="w-full md:w-1/2 flex flex-col items-start">
                 <motion.h1
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="text-4xl sm:text-5xl font-black leading-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight"
                 >
                   {slide.title}
                 </motion.h1>
@@ -68,7 +70,7 @@ const Banner = () => {
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 0.6 }}
                   transition={{ duration: 1, delay: 0.2 }}
-                  className="text-base sm:text-lg text-gray-600 tracking-tight mt-6 leading-relaxed"
+                  className="text-base sm:text-lg text-gray-600 tracking-tight mt-5 sm:mt-6 leading-relaxed"
                 >
                   {slide.description.split("\n").map((line, idx) => (
                     <span key={idx}>
@@ -87,26 +89,24 @@ const Banner = () => {
                 </motion.button>
 
                 {/* Social Icons */}
-                <div className="flex flex-row md:flex-col mt-10 md:mt-20 gap-6 text-xl text-black">
+                <div className="flex flex-row md:flex-col mt-8 sm:mt-10 gap-6 text-xl text-black">
                   <FaInstagram className="hover:text-pink-400 transition-colors duration-300 cursor-pointer" />
                   <FaFacebookF className="hover:text-blue-600 transition-colors duration-300 cursor-pointer" />
                   <FaTwitter className="hover:text-blue-400 transition-colors duration-300 cursor-pointer" />
                 </div>
               </div>
 
-              {/* Right Image */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="w-full md:w-1/2 h-[100px] sm:h-[100px] md:h-full flex items-center justify-center relative overflow-hidden rounded-2xl"
-                
+                className="w-full md:w-1/2 flex items-center justify-center relative overflow-hidden rounded-2xl"
               >
                 {/* Main Image */}
                 <img
                   src={slide.img}
                   alt="Creative Guide"
-                  className="h-[75%] sm:h-[85%] w-auto object-cover shadow-2xl"
+                  className="w-[80%] sm:w-[90%] md:w-[95%] max-w-[400px] md:max-w-none h-auto object-cover"
                 />
               </motion.div>
             </div>
@@ -118,4 +118,3 @@ const Banner = () => {
 };
 
 export default Banner;
-  

@@ -81,7 +81,10 @@ const Navbar = () => {
               <FaUserCircle className="text-3xl" />
             )}
             <p>{user.displayName}</p>
-            <button onClick={logOut} className="btn btn-outline">
+            <button
+              onClick={logOut}
+              className="btn bg-cyan-400 hover:bg-cyan-300 text-black"
+            >
               Log-Out
             </button>
           </>
