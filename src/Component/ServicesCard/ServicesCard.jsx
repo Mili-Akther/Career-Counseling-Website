@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ServicesCard = ({ service }) => {
   const { image, name, category, price, counselor, id } = service;
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <div className="card card-body bg-base-100 shadow-xl transition-transform hover:scale-105 mx-auto">
-      <figure className="w-full h-[220px] overflow-hidden">
+    <div
+      className="card bg-base-100 p- shadow-xl transition-transform hover:scale-105 w-full"
+      data-aos="fade-up"
+    >
+      <figure className="w-full h-[300px] overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="h-48 overflow-hidden object-center w-[400px] rounded-lg"
+          className="w-full h-full object-cover rounded-xl"
         />
       </figure>
       <div className="card-body">
@@ -26,7 +35,7 @@ const ServicesCard = ({ service }) => {
         </p>
         <div className="card-actions justify-end">
           <NavLink to={`/serviceDetails/${id}`}>
-            <button className="btn btn-outline-outline bg-cyan-400 hover:bg-cyan-300 text-black">
+            <button className="btn bg-cyan-400 hover:bg-cyan-300 text-black">
               Learn More
             </button>
           </NavLink>

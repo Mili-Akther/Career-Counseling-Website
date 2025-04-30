@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
 
-      <div className="w-11/12 mx-auto grid md:grid-cols-3 gap-5 items-center justify-items-center mt-10 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-4 md:px-8 ">
         {services.slice(2, 8).map((service) => (
           <ServicesCard key={service.id} service={service} />
         ))}

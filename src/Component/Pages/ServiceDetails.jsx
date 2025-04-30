@@ -58,7 +58,7 @@
         </div>
 
         {/* Main Content Section */}
-        <div className="w-full max-w-7xl mx-auto px-4 py-8">
+        <div className="w-full max-w-7xl mx-auto px-4 py-8 ">
           <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
             {/* Left Image */}
             <div className="w-full lg:w-1/2">

@@ -19,9 +19,9 @@ const Footer = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center mb-20"
+        className="text-center mb-16"
       >
-        <h1 className="text-6xl md:text-[8rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-blue-400 to-cyan-400 relative inline-block animate-pulse">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-blue-400 to-cyan-400 relative inline-block animate-pulse">
           STAY IN TOUCH
         </h1>
         <div className="mt-4 text-base md:text-lg text-gray-400">
@@ -29,21 +29,22 @@ const Footer = () => {
         </div>
       </motion.div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-[500px] justify-between items-end">
+      {/* Content: Contact + Links */}
+      <div className="max-w-7xl  mx-auto flex flex-col md:flex-row justify-between items-center gap-12 ">
         {/* Left Section - Contact Info + Socials */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="space-y-6"
+          className="space-y-5 text-center w-full md:w-1/2"
         >
           <div>
-            <p className="font-semibold text-2xl ">WE'RE HERE TO HELP</p>
-            <p className="text-sm mt-1 text-gray-300">
+            <p className="font-semibold text-3xl">WE'RE HERE TO HELP</p>
+            <p className="text-sm mt-2 text-gray-300">
               support@flowersforsociety.com
             </p>
           </div>
-          <div className="flex gap-5 text-3xl">
+          <div className="flex gap-5 text-center text-3xl w-full md:w-1/2 mx-auto justify-center">
             {[FaInstagram, FaDiscord, FaTwitter].map((Icon, index) => (
               <motion.div
                 key={index}
@@ -65,7 +66,7 @@ const Footer = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="text-sm grid gap-3 mt-6 md:mt-0"
+          className="text-sm grid grid-cols-2 gap-12 w-full md:w-1/2"
         >
           {footerLinks.map((link, i) => (
             <motion.a
