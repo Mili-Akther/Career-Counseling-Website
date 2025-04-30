@@ -67,6 +67,11 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <div>
+        <NavLink to="/my-bookings" className="hover:underline">
+          My Bookings
+        </NavLink>
+      </div>
 
       <div className="flex items-center gap-4">
         {user?.email ? (

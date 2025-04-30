@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Component/MainLayout/MainLayout";
 import Home from "../Component/Home/Home";
 import About from "../Component/About/About";
-import Profile from "../Component/Profile/Profile";
+import Profile from "../Component/Pages/Profile";
 import Contact from "../Component/Contact/Contact";
 import Services from "../Component/Services/Services";
 import Login from "../Component/Pages/Login";
@@ -10,6 +10,7 @@ import Error from "../Component/Error/Error";
 import Register from "../Component/Pages/Register";
 import ServiceDetails from "../Component/Pages/ServiceDetails";
 import PrivateRouter from "./PrivateRouter";
+import MyBookings from "../Component/Pages/MyBookings";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,15 @@ const router = createBrowserRouter([
           return singleData;
         },
       },
+      {
+        path: "/my-bookings",
+        element: (
+          <PrivateRouter>
+            <MyBookings />
+          </PrivateRouter>
+        ),
+      },
+
       {
         path: "/services",
         element: <Services></Services>,
