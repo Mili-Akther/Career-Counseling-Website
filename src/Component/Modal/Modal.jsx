@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { addToMyBookings } from "../../Utils";
+import { toast } from "react-toastify";
 
 const emptyForm = {
   firstName: "",
@@ -34,7 +35,9 @@ const Modal = ({ open, onClose, onSubmit, bookingData }) => {
 
     addToMyBookings(booking); // Save full data to localStorage
     onSubmit(booking); // Send data to parent component
-    onClose(); // Close the modal
+    toast.success(
+      bookingData ? "Booking updated successfully!" : "Booking created successfully!")
+    onClose();
   };
 
   return (

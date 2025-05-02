@@ -1,14 +1,18 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 to-slate-700 text-white py-16">
+       <Helmet>
+              <title>About US | CareerGuide</title>
+            </Helmet>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-start gap-12">
           {/* Left Column - About Heading and Text */}
           <div className="w-full lg:w-2/5 lg:sticky lg:top-16">
             <h1 className="text-6xl md:text-7xl font-bold text-cyan-300 mb-8">
-              About
+              About Us
             </h1>
             <div className="space-y-6 text-gray-300">
               <p className="text-lg">

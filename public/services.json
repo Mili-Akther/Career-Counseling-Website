@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co.com/HfrfPRc4/john-doe.jpg",
+    "image": "https://i.ibb.co.com/6Rn17Rmz/image-3.jpg",
     "name": "Career Counseling Session",
     "category": "Online",
     "price": "$30",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co.com/VpkdJt25/Jane-Smith.jpg",
+    "image": "https://i.ibb.co.com/C3ysWwCr/image-4.jpg",
     "name": "Resume Review",
     "category": "Offline",
     "price": "$15",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co.com/232kpGhL/Mark-Lee.jpg",
+    "image": "https://i.ibb.co.com/FbHjkhVW/image-5.jpg",
     "name": "Mock Interview",
     "category": "Group",
     "price": "$20",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co.com/chPCzPRC/Lily-Grace.jpg",
+    "image": "https://i.ibb.co.com/nMtmxPm6/image-6.jpg",
     "name": "Cover Letter Writing ",
     "category": "Online",
     "price": "$10",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co.com/2YYJFc01/Olivia-White.jpg",
+    "image": "https://i.ibb.co.com/GvzGHzRv/image-2.jpg",
     "name": "LinkedIn Profile Setup",
     "category": "Online",
     "price": "$12",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "image": "https://i.ibb.co.com/Dh936Sv/Emma-Ray.jpg",
+    "image": "https://i.ibb.co.com/RpNyGZp9/image-7.jpg",
     "name": "Job Search Strategy",
     "category": "Offline",
     "price": "$25",

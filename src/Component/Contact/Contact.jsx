@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import contactUsImg from "../../assets/Contact-us.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -41,6 +42,9 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 to-slate-700 text-white py-10 px-4 sm:px-6 md:px-10 lg:px-20">
+       <Helmet>
+              <title>Contact Us | CareerGuide</title>
+            </Helmet>
       <div className="max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-18">
         {/* Left Side - Illustration */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">

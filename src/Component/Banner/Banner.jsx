@@ -83,6 +83,9 @@ const Banner = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1.6 }}
+                  transition={{ duration: 1, delay: 0.2 }}
                   className="mt-8 px-6 py-3 bg-black text-white uppercase text-sm tracking-wide font-bold rounded-full flex items-center gap-2"
                 >
                   {slide.button} <span>→</span>

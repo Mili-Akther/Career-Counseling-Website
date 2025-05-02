@@ -11,6 +11,7 @@ import Register from "../Component/Pages/Register";
 import ServiceDetails from "../Component/Pages/ServiceDetails";
 import PrivateRouter from "./PrivateRouter";
 import MyBookings from "../Component/Pages/MyBookings";
+import ForgetPassword from "../Component/ForgetPassword/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
         element: <Services></Services>,
         loader: () => fetch("/services.json"),
       },
+      {
+         path:"/forget-password" ,
+          element: <ForgetPassword></ForgetPassword>,
+      }
     ],
   },
   {

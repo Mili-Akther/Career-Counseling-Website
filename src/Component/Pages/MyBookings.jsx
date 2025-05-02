@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 import { NavLink } from "react-router-dom";
 import { addToMyBookings, getStoreBookAppointment, removeFromMyBookings } from "../../Utils";
+import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const MyBooking = () => { 
 
@@ -47,15 +49,20 @@ const MyBooking = () => {
 const handleCancel = (id) => {
   removeFromMyBookings(id);
   setBookings((prev) => prev.filter((booking) => booking.id !== id));
-  console.log("Updated localStorage:", localStorage.getItem("myBookings"));
+  toast.success("Booking cancelled successfully!");
+  // console.log("Updated localStorage:", localStorage.getItem("myBookings"));
 };
 
   return (
     <div className="px-6 py-10 max-w-4xl mx-auto">
+      <Helmet>
+        <title>My Bookings | CareerGuide</title>
+      </Helmet>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold">My Bookings</h2>
-        <NavLink to="/services"
-          className="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-2 font-semibold transition duration-300"       
+        <NavLink
+          to="/services"
+          className="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-2 font-semibold transition duration-300"
         >
           New Booking
         </NavLink>
@@ -64,7 +71,10 @@ const handleCancel = (id) => {
       {bookings.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg mb-4">You have no bookings yet</p>
-          <button onClick={handleNewBooking} className="btn btn-primary">
+          <button
+            onClick={handleNewBooking}
+            className="btn  bg-cyan-400 hover:bg-cyan-300 text-black"
+          >
             Book Your First Session
           </button>
         </div>

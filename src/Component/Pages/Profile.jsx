@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
+  
   const [name, setName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [message, setMessage] = useState("");
@@ -17,14 +19,18 @@ const Profile = () => {
         photoURL: photoURL,
       });
       setMessage("Profile updated successfully!");
-      window.location.reload(); // Refresh to reflect changes in UI (optional)
     } catch (error) {
       setMessage("Error updating profile: " + error.message);
     }
   };
-
+if (!user) {
+  return  <span className="flex p-8  mx-auto loading loading-ball loading-xl"></span>
+}
   return (
     <div className="max-w-md mx-auto mt-12 p-6 bg-white shadow-xl rounded-2xl">
+       <Helmet>
+              <title>My Profile | CareerGuide</title>
+            </Helmet>
       <h2 className="text-2xl font-bold mb-4 text-center">My Profile</h2>
       <img
         src={user.photoURL}
@@ -52,7 +58,10 @@ const Profile = () => {
             className="input input-bordered w-full"
           />
         </div>
-        <button type="submit" className="btn btn-outline w-full">
+        <button
+          type="submit"
+          className="btn bg-cyan-400 hover:bg-cyan-300 text-black w-full"
+        >
           Save Changes
         </button>
       </form>

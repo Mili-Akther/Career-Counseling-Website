@@ -2,9 +2,15 @@ import React, { useContext, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
+import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
+import { toast } from "react-toastify";
+
 
 const Register = () => {
-  const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
+  const { user, createNewUser, setUser, updateUserProfile } =
+    useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -47,9 +53,11 @@ const Register = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             navigate(location.state || "/");
+            toast.success("Registration successful!");
           })
           .catch((err) => {
             // console.log(err);
+
           });
       })
       .catch((error) => {
@@ -57,13 +65,34 @@ const Register = () => {
 
         if (errorCode === "auth/email-already-in-use") {
           setError({ ...error, email: "Email is already in use" });
+          toast.error("Email is already in use");
         } else {
           setError({ ...error, general: error.message });
         }
       });
   };
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  prompt: "select_account", //added this forces the account picker
+});
+const handleGoogleRegister = () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // console.log("Google user:", result.user);
+      setUser(result.user);
+      navigate(location.state || "/");
+    })
+    .catch((error) => {
+      console.error("Google Sign-In Error:", error.message);
+    });
+};
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-100 via-white to-purple-100">
+      <Helmet>
+        <title>Register | CareerGuide</title>
+      </Helmet>
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl">
         <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">
           Register at CareerGuide
@@ -141,14 +170,20 @@ const Register = () => {
             </label>
           )}
 
-          <button type="submit" className="btn btn-outline  w-full">
+          <button
+            type="submit"
+            className="btn bg-cyan-400 hover:bg-cyan-300 text-black  w-full"
+          >
             Register
           </button>
         </form>
 
         <div className="divider">OR</div>
 
-        <button className="btn btn-outline btn btn-outline-outline btn btn-outline-secondary w-full">
+        <button
+          onClick={handleGoogleRegister}
+          className=" btn-outline-outline btn btn-outline-secondary w-full"
+        >
           Continue with Google
         </button>
 
