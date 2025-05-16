@@ -9,7 +9,7 @@ import Login from "../Component/Pages/Login";
 import Error from "../Component/Error/Error";
 import Register from "../Component/Pages/Register";
 import ServiceDetails from "../Component/Pages/ServiceDetails";
-import PrivateRouter from "./PrivateRouter";
+import PrivateRouter from "../Utils/PrivateRouter";
 import MyBookings from "../Component/Pages/MyBookings";
 import ForgetPassword from "../Component/ForgetPassword/ForgotPassword";
 

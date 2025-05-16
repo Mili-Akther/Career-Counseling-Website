@@ -2,7 +2,8 @@
 
 **CareerGuide** is a user-friendly and modern web platform designed to help users navigate their career journey with helpful resources, account features, and interactive services. Built with React, Firebase Authentication, and Tailwind CSS, it offers seamless login, registration, and password recovery experiences.
 
-🔗 **Live Site**: [https://career-counseling-websit-91461.web.app/](https://career-guide-line.netlify.app/)
+🔗 **Live Site**: [https://career-counseling-websit-91461.web.app/]
+(https://career-guide-line.netlify.app/)
 ---
 
 ## ✨ Features
